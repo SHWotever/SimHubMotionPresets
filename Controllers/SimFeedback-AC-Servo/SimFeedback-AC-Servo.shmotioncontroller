@@ -5,7 +5,7 @@
     "OutputId": "c01be3a8-b3d2-4d1c-a47f-45d2c68e2193",
     "Settings": {
       "LockSettings": true,
-      "SerialPort": "COM10",
+      "SerialPort": null,
       "DataBits": 8,
       "SerialStopBits": 1,
       "SerialParity": 0,
@@ -83,7 +83,7 @@
         ]
       },
       "SecurityAcknowledgementAccepted": true,
-      "PortDescription": "COM10",
+      "PortDescription": "Unset",
       "ActuatorOrderingSettings": {
         "MaxActuatorsEx": 4,
         "ConfigurationDone": false,
