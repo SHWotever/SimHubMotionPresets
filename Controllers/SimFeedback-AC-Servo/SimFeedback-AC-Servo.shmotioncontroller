@@ -1,0 +1,122 @@
+{
+  "Output": {
+    "CustomName": "SimFeedback-AC-Servo",
+    "Comments": "Preset compatible with https://github.com/SimFeedback/SimFeedback-AC-Servo/releases/tag/00_10_01_experimental firmware (leonardo version).\r\nOpenSFX design, Simfeedback software ,Simfeedback firmware are under non commercial usage licence : https://github.com/SimFeedback/SimFeedback-AC-Servo/wiki/License",
+    "OutputId": "c01be3a8-b3d2-4d1c-a47f-45d2c68e2193",
+    "Settings": {
+      "LockSettings": true,
+      "SerialPort": "COM10",
+      "DataBits": 8,
+      "SerialStopBits": 1,
+      "SerialParity": 0,
+      "BaudRate": 250000,
+      "AfterOpenDelay": 0,
+      "GenericProtocolDefinition": {
+        "SettingsBuilder": {
+          "Settings": [
+            {
+              "Maximum": 100,
+              "Minimum": 0,
+              "PropertyName": "Acceleration",
+              "CurrentValue": 70,
+              "Name": null,
+              "TypeName": "SliderEntry",
+              "Label": "Acceleration"
+            },
+            {
+              "Maximum": 100,
+              "Minimum": 0,
+              "PropertyName": "MinimumSpeed",
+              "CurrentValue": 70,
+              "Name": null,
+              "TypeName": "SliderEntry",
+              "Label": "Minimum speed"
+            },
+            {
+              "Maximum": 100,
+              "Minimum": 0,
+              "PropertyName": "MaximumSpeed",
+              "CurrentValue": 90,
+              "Name": null,
+              "TypeName": "SliderEntry",
+              "Label": "Maximum speed"
+            }
+          ],
+          "IsEditMode": true
+        },
+        "AxisResolution": 16,
+        "AxisFormat": 1,
+        "StartCommands": [
+          {
+            "MustWaitForMessage": true,
+            "WaitForMessage": "10,Arduino ready",
+            "WaitForDelay": 5000,
+            "Command": "10;",
+            "CommandDelay": 2000
+          },
+          {
+            "MustWaitForMessage": false,
+            "WaitForMessage": null,
+            "WaitForDelay": 5000,
+            "Command": "14,<Setting,Acceleration,0>,<Setting,MinimumSpeed,0>,<Setting,MaximumSpeed,0>;",
+            "CommandDelay": 500
+          }
+        ],
+        "UpdateCommands": [
+          {
+            "Command": "3,<CommandCounter>,<Axis1,string,-4096,4096>,<Axis2,string,-4096,4096>,<Axis3,string,-4096,4096>,<Axis4,string,-4096,4096>;",
+            "CommandDelay": 1
+          },
+          {
+            "Command": "15;",
+            "CommandDelay": 2000
+          }
+        ],
+        "StopCommands": [
+          {
+            "MustWaitForMessage": true,
+            "WaitForMessage": "7,Arduino stopped",
+            "WaitForDelay": 10000,
+            "Command": "7;",
+            "CommandDelay": 500
+          }
+        ]
+      },
+      "SecurityAcknowledgementAccepted": true,
+      "PortDescription": "COM10",
+      "ActuatorOrderingSettings": {
+        "MaxActuatorsEx": 4,
+        "ConfigurationDone": false,
+        "TestingAmplitude": 2.0,
+        "BeltTestingAmplitude": 10.0,
+        "TestingFrequency": 2.0,
+        "Roles": [
+          {
+            "Role": 0,
+            "ReverseDirection": false
+          },
+          {
+            "Role": 0,
+            "ReverseDirection": false
+          },
+          {
+            "Role": 0,
+            "ReverseDirection": false
+          },
+          {
+            "Role": 0,
+            "ReverseDirection": false
+          }
+        ]
+      },
+      "AfterConnectMotionDelay": 5,
+      "DisconnectReconnectDelay": 0,
+      "StartMode": 1,
+      "UseIdleTimeout": true,
+      "IdleTimeoutSeconds": 30,
+      "StartInIdle": true,
+      "IdleDetectionMode": 0
+    },
+    "TypeName": "GenericSerialOutputV2"
+  }
+}

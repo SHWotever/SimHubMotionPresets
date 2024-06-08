@@ -1,0 +1,2 @@
+Preset compatible with https://github.com/SimFeedback/SimFeedback-AC-Servo/releases/tag/00_10_01_experimental firmware (leonardo version).
+OpenSFX design, Simfeedback software ,Simfeedback firmware are under non commercial usage licence : https://github.com/SimFeedback/SimFeedback-AC-Servo/wiki/License
