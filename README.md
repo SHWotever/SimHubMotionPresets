@@ -2,7 +2,7 @@ A collection of settings for Simhub motion (Geometry and controllers) which can'
 https://www.simhubdash.com/simhub-motion-addon/
 
 By using one of those presets you must comply to the respective usage licenses of each controller. Presets are delivered without warranty.
-The presets files themselves are under unlicence, feel free to use, reause adapt, take inspiration to drive any controllers you may want. 
+The presets files themselves are under unlicence, feel free to use, reuse, adapt, take inspiration to drive any controllers you may want. 
 
 - SimFeedback-AC-Servo : https://github.com/SimFeedback/SimFeedback-AC-Servo/
 https://github.com/SimFeedback/SimFeedback-AC-Servo/wiki/License
