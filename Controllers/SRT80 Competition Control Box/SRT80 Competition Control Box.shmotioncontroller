@@ -1,9 +1,10 @@
 {
   "Output": {
-    "CustomName": "SRT80 Competition Control Box",
     "Comments": "Preset compatible with https://lebois-racing.fr/competition-control-box-pour-les-verins-srt80",
-    "OutputId": "45943125-d72e-4fa8-87d6-f489bc6636fa",
+    "CustomName": "SRT80 Competition Control Box",
     "Settings": {
+      "RtsEnable": true,
+      "DtrEnable": false,
       "LockSettings": true,
       "SerialPort": null,
       "DataBits": 8,
@@ -16,6 +17,7 @@
           "Settings": [],
           "IsEditMode": false
         },
+        "ShowWaitForResponse": true,
         "AxisResolution": 16,
         "AxisFormat": 1,
         "StartCommands": [
@@ -38,37 +40,46 @@
             "MustWaitForMessage": false,
             "WaitForMessage": null,
             "WaitForDelay": 5000,
-            "Command": "T",
+            "Command": "C",
             "CommandDelay": 1
           }
         ]
       },
       "SecurityAcknowledgementAccepted": true,
-      "PortDescription": "Unset",
       "ActuatorOrderingSettings": {
         "MaxActuatorsEx": 5,
         "ConfigurationDone": true,
-        "TestingAmplitude": 2.0,
-        "BeltTestingAmplitude": 10.0,
-        "TestingFrequency": 2.0,
+        "UseParkPosition": true,
+        "ParkDuration": 3000,
+        "UseParkPositionEx": true,
         "Roles": [
           {
-            "Role": 0,
+            "RangeLimit": 100.0,
+            "ParkPosition": 0.0,
+            "Role": 2,
             "ReverseDirection": false
           },
           {
-            "Role": 0,
+            "RangeLimit": 100.0,
+            "ParkPosition": 0.0,
+            "Role": 4,
             "ReverseDirection": false
           },
           {
-            "Role": 0,
+            "RangeLimit": 100.0,
+            "ParkPosition": 0.0,
+            "Role": 3,
             "ReverseDirection": false
           },
           {
-            "Role": 0,
+            "RangeLimit": 100.0,
+            "ParkPosition": 0.0,
+            "Role": 1,
             "ReverseDirection": false
           },
           {
+            "RangeLimit": 100.0,
+            "ParkPosition": 50.0,
             "Role": 0,
             "ReverseDirection": false
           }
@@ -80,8 +91,10 @@
       "UseIdleTimeout": true,
       "IdleTimeoutSeconds": 30,
       "StartInIdle": true,
+      "AllowIdling": true,
       "IdleDetectionMode": 0
     },
+    "OutputId": "45943125-d72e-4fa8-87d6-f489bc6636fa",
     "TypeName": "GenericSerialOutputV2"
   }
 }
